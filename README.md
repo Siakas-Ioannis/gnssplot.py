@@ -9,21 +9,27 @@ Python script to parse and plot gnss quality control data produced from RINGO an
 
 --- Necessary Quality Control Files ---
 
-RINGO: you need the file that contains the aggregated observables (.csv).
-TEQC: you need two files for geometry (.ele + .azi) and one for the values you wish to plot (.sn1/.sn2/.mp1/.mp2/.ion/.iod).
+-RINGO: you need the file that contains the aggregated observables (.csv).
+
+-TEQC: you need two files for geometry (.ele + .azi) and one for the values you wish to plot (.sn1/.sn2/.mp1/.mp2/.ion/.iod).
 
 --- Commands ---
 
 - First go to the directory you keep the quality control files
+
 cd C:\GNSSPLOT\QC
 
 - For RINGO:
+
 python gnssplot.py [plottype] [.csv filename] --obs [variable to plot]
-eg. python gnssplot.py skyplot rnx.csv --obs S1
+
+eg. "python gnssplot.py skyplot rnx.csv --obs S1
 
 - For TEQC:
+
 python gnssplot.py [plottype] [.azi filename] [.ele filename] [value filename]
-eg. python gnssplot.py azel rnx.azi rnx.ele rnx.sn1
+
+eg. "python gnssplot.py azel rnx.azi rnx.ele rnx.sn1"
 
 --- Plot Types ---
 skyplot: Elevation vs Azimuth Polar Graph
