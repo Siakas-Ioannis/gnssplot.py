@@ -12,7 +12,7 @@ from datetime import datetime
 DOT_SIZE = 5            # Size of the dots
 COLOR_MODE = "value"    # Options: "value" (gradient) OR "constellation" (fixed color)
 
-# Color scale settings
+# Default color scale settings (large values only)
 V_MIN = 25              # Minimum gradient scale value 
 V_MAX = 55              # Maximum gradient scale value
 
