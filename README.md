@@ -2,23 +2,26 @@
 Python script to parse and plot gnss quality control data produced from RINGO and TEQC.
 
 --- Installation ---
+
 1. Place 'gnssplot.py' in C:\GNSSPLOT (or any other directory you wish).
 2. Add C:\GNSSPLOT to PATH to be able to execute without specifying its location each time.
 3. Place your Quality Control files in C:\GNSSPLOT\QC (or any other directory you wish).
 
 --- Necessary Quality Control Files ---
+
 RINGO: you need the file that contains the aggregated observables (.csv).
 TEQC: you need two files for geometry (.ele + .azi) and one for the values you wish to plot (.sn1/.sn2/.mp1/.mp2/.ion/.iod).
 
 --- Commands ---
-First go to the directory you keep the quality control files
+
+- First go to the directory you keep the quality control files
 cd C:\GNSSPLOT\QC
 
-For RINGO:
+- For RINGO:
 python gnssplot.py [plottype] [.csv filename] --obs [variable to plot]
 eg. python gnssplot.py skyplot rnx.csv --obs S1
 
-For TEQC:
+- For TEQC:
 python gnssplot.py [plottype] [.azi filename] [.ele filename] [value filename]
 eg. python gnssplot.py azel rnx.azi rnx.ele rnx.sn1
 
