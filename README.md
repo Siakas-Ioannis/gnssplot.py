@@ -21,38 +21,29 @@ Python script to parse and plot gnss quality control data produced from RINGO an
 
 - For RINGO:
 
-  python gnssplot.py [plottype] [.csv filename] --obs [variable to plot]
+  python gnssplot.py [plottype] [.csv filename] --obs [observable to plot]
 
-  eg. "python gnssplot.py skyplot rnx.csv --obs S1
+  e.g. python gnssplot.py skyplot rnx.csv --obs S1
 
 - For TEQC:
 
   python gnssplot.py [plottype] [.azi filename] [.ele filename] [value filename]
 
-  eg. "python gnssplot.py azel rnx.azi rnx.ele rnx.sn1"
+  e.g. python gnssplot.py azel rnx.azi rnx.ele rnx.sn1
 
 --- Plot Types ---
 
-  skyplot: Elevation vs Azimuth Polar Graph
-  
-  azel: Elevation vs Azimuth Cartesian Graph
-  
-  elval: Elevation vs Value Cartesian Graph
-  
-  time: Time Series
-  
-  vis: Visibility/Gantt Chart
+- skyplot: Elevation vs Azimuth Polar Graph
+- azel: Elevation vs Azimuth Cartesian Graph
+- elval: Elevation vs Value Cartesian Graph
+- time: Time Series
+- vis: Visibility/Gantt Chart
 
 --- Observable to Plot (RINGO only) ---
 
-  S1: Signal Strength on Primary Freq (L1/E1/B1)
-  
-  L1: Carrier Phase on Primary Freq (L1/E1/B1)
-  
-  C1: Pseudorange on Primary Freq (L1/E1/B1)
-  
-  S2: Signal Strength on Secondary Freq (L2/G2)
-  
-  L2: Carrier Phase on Secondary Freq (L2/G2)
-  
-  C2: Pseudorange on Secondary Freq (L2/G2)
+- S1: Signal Strength on Primary Freq (L1/E1/B1)
+- L1: Carrier Phase on Primary Freq (L1/E1/B1)
+- C1: Pseudorange on Primary Freq (L1/E1/B1)
+- S2: Signal Strength on Secondary Freq (L2/G2)
+- L2: Carrier Phase on Secondary Freq (L2/G2)
+- C2: Pseudorange on Secondary Freq (L2/G2)
