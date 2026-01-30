@@ -1,5 +1,5 @@
 # gnssplot.py
-Python script to parse and plot gnss quality control data produced from RINGO and TEQC.
+Python3 CLI utility to parse and plot gnss quality control data produced from RINGO and TEQC.
 
 --- Installation ---
 
