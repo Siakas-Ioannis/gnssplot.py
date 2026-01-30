@@ -12,7 +12,7 @@ from datetime import datetime
 DOT_SIZE = 5            # Size of the dots
 COLOR_MODE = "value"    # Options: "value" (gradient) OR "constellation" (fixed color)
 
-# Default scale settings (for high values only)
+# Color scale settings
 V_MIN = 25              # Minimum gradient scale value 
 V_MAX = 55              # Maximum gradient scale value
 
@@ -209,7 +209,6 @@ def parse_ringo(filename, target_obs=None):
 
 # --- Reads TEQC Files (.azi + .ele + values) ---
 def parse_teqc(files):
-    """Reads TEQC files."""
     data = {}
     azi_file = next((f for f in files if f.endswith('.azi')), None)
     ele_file = next((f for f in files if f.endswith('.ele')), None)
@@ -227,8 +226,8 @@ def parse_teqc(files):
                     break
 
     print(f"Reading TEQC files...")
-    # (Existing TEQC logic unchanged for brevity, insert full function here if needed)
-    # Re-inserting simplified compact reader for completeness
+    
+    # Simplified compact reader for completeness
     def read_compact(fname):
         content = []
         if not fname: return content
@@ -341,10 +340,10 @@ def plot_data(data, mode="skyplot", obs_name=None):
 
     if len(valid_vals) == 0:
         vmin, vmax = -1, 1 
-    elif np.max(valid_vals) > 10: 
+    elif np.max(valid_vals) > 15: 
         vmin, vmax = V_MIN, V_MAX
     else:
-        limit = np.percentile(np.abs(valid_vals), 98) 
+        limit = np.percentile(np.abs(valid_vals), 98)
         limit = max(limit, 0.2) 
         vmin, vmax = -limit, limit
         print(f"  -> Auto-detected Data Range: {vmin:.2f} to {vmax:.2f}")
